@@ -1,4 +1,3 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 Welcome,
 
@@ -36,4 +35,6 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 
 ---
 
-Happy coding!
+---------------------------------
+
+Bootsrtap template : https://github.com/startbootstrap/startbootstrap-personal

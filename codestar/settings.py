@@ -34,6 +34,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["mb2test.herokuapp.com", "localhost"]
 
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -50,6 +56,8 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'allauth.socialaccount.providers.github',
+    'allauth.socialaccount.providers.google',
     'django_summernote',
     'blog',
 ]
@@ -58,6 +66,8 @@ SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+CONTACT_DIRECT_IRL = '/'
 
 MESSAGE_TAGS = {
         messages.DEBUG: 'alert-info',
@@ -90,10 +100,30 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.request',
             ],
         },
     },
 ]
+
+
+SOCIALACCOUNT_PROVIDERS = {
+    'github': {
+        'APP':{
+            'client_id' : 'f9c8225c44661502e20b',
+            'secret' : '9bed7c4b47ad749d24e4393d1708aeee6dec4507',
+            'key' : ''
+        }
+    },
+    'google': {
+        'APP':{
+            'client_id' : 'f9c8225c44661502e20b',
+            'secret' : '9bed7c4b47ad749d24e4393d1708aeee6dec4507',
+            'key' : ''
+        }
+    },
+}
+
 
 WSGI_APPLICATION = 'codestar.wsgi.application'
 
