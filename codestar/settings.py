@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.github',
     'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.facebook',
     'django_summernote',
     'blog',
 ]
@@ -115,10 +116,17 @@ SOCIALACCOUNT_PROVIDERS = {
             'key' : ''
         }
     },
+    'facebook': {
+        'APP':{
+            'client_id' : '1872821426351753',
+            'secret' : '3eecc294f7e50b8c39116a10a6d42fBe',
+            'key' : ''
+        }
+    },
     'google': {
         'APP':{
-            'client_id' : 'f9c8225c44661502e20b',
-            'secret' : '9bed7c4b47ad749d24e4393d1708aeee6dec4507',
+            'client_id' : '1872821426351753',
+            'secret' : '3eecc294f7e50b8c39116a10a6d42fBe',
             'key' : ''
         }
     },
