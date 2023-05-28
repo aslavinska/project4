@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post
-from .forms import CommentForm
+from .forms import CommentForm, ContactForm
 
 
 class PostList(generic.ListView):
@@ -74,3 +74,18 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+def contact(request):
+        if request.method == 'POST':
+            form = ContactForm(request.POST)
+            if form.is_valid():
+                # Process the form data
+                pass
+                return redirect('success')
+        else:
+            form = ContactForm()
+        return render(request, 'contact.html', {'form': form})
+
+def success(request):
+        return HttpResponse('Success!')

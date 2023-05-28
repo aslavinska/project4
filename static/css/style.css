@@ -19,9 +19,9 @@
 
 /* Colors */
 :root {
-  --color-default: #fafafa;
-  --color-primary: #27a776;
-  --color-secondary: #161718;
+  --color-default: #4b4b4b;
+  --color-primary: #6327a7;
+  --color-secondary: #a9a4b4;
 }
 
 /* Smooth scroll behavior */
@@ -35,7 +35,7 @@
 body {
   font-family: var(--font-default);
   color: var(--color-default);
-  background-color: #000;
+  background-color: #c4a3e9;
 }
 
 a {
@@ -44,7 +44,7 @@ a {
 }
 
 a:hover {
-  color: #32cf93;
+  color: #7b32cf;
   text-decoration: none;
 }
 
@@ -81,7 +81,7 @@ h6 {
   width: 120px;
   height: 1px;
   display: inline-block;
-  background: #5bd9a9;
+  background: #815bd9;
   margin: 4px 10px;
 }
 
@@ -302,7 +302,7 @@ h6 {
   font-size: 32px;
   margin: 0;
   font-weight: 400;
-  color: #fff;
+  color: #7743a186;
   font-family: var(--font-secondary);
 }
 
@@ -336,7 +336,7 @@ h6 {
 }
 
 .header .header-social-links a:hover {
-  color: #fff;
+  color: #bfaecf;
 }
 
 @media (max-width: 575px) {
