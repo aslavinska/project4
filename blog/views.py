@@ -8,7 +8,7 @@ from .forms import CommentForm, ContactForm
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by("-created_on")
-    template_name = "index.html"
+    template_name = "blog.html"
     paginate_by = 6
 
 
@@ -89,3 +89,11 @@ def contact(request):
 
 def success(request):
         return HttpResponse('Success!')
+
+
+def about(request):
+    return render(request, 'about.html',{})
+
+
+def home(request):
+    return render(request, 'home.html',{})
