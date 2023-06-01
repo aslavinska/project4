@@ -8,6 +8,7 @@ urlpatterns = [
     path('contact/', contact, name='contact'),
     path('success/', success, name='success'),
     path('about/', views.about, name='about'),
+    path('onlinetime/', views.onlinetime, name='onlinetime'),
     path('', views.home, name='home'),
 
     path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),

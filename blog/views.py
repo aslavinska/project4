@@ -97,3 +97,7 @@ def about(request):
 
 def home(request):
     return render(request, 'home.html',{})
+
+
+def onlinetime(request):
+    return render(request, 'onlinetime.html',{})
