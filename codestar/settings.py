@@ -32,7 +32,12 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["mb2test.herokuapp.com", "localhost", "8000-aslavinska-project4-7uamhidnrbh.ws-eu98.gitpod.io"]
+ALLOWED_HOSTS = ["mb2test.herokuapp.com", "localhost", "8000-aslavinska-project4-7uamhidnrbh.ws-eu98.gitpod.io", "django.core.mail.backends.smtp.EmailBackend"]
+
+EMAIL_HOST = os.environ.get('MAILGUN_SMTP_SERVER', '')
+EMAIL_PORT = os.environ.get('MAILGUN_SMTP_PORT', '')
+EMAIL_HOST_USER = os.environ.get('MAILGUN_SMTP_LOGIN', '')
+EMAIL_HOST_PASSWORD = os.environ.get('MAILGUN_SMTP_PASSWORD', '')
 
 
 AUTHENTICATION_BACKENDS = [
@@ -51,6 +56,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'cloudinary_storage',
     'django.contrib.staticfiles',
+    'django.core.mail',
     'cloudinary',
     'crispy_forms',
     'allauth',

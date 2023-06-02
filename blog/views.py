@@ -1,6 +1,7 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
+from django.core.mail import EmailMessage
 from .models import Post
 from .forms import CommentForm, ContactForm
 
@@ -80,15 +81,13 @@ def contact(request):
         if request.method == 'POST':
             form = ContactForm(request.POST)
             if form.is_valid():
-                # Process the form data
-                pass
                 return redirect('success')
         else:
             form = ContactForm()
         return render(request, 'contact.html', {'form': form})
 
 def success(request):
-        return HttpResponse('Success!')
+        return render(request, 'success.html')
 
 
 def about(request):

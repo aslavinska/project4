@@ -1,40 +1,80 @@
+# Sailor Shushu blog
+The official website of a British - Latvian Artist Sailor Shushu. This page is created for Sailor Shushu's fans of any age to enjoy her art and discuss it in a friendly community, support charities and to be able to contact Sailor Shushu for official communication abd business offers.
+Users of this will be able to find all the information they need to know about Sailor Shushu: About, Online times when users can chat with the artist real time, Contact form for business enquires, My blog page to disccus new art and book ideas. This site is targeted towards Sailor Shushu's fans, who love her art and want to commiunicate with her. 
+![Responsive](/assets/images/Responsive.jpg)
 
-Welcome,
+# Features
 
-This is the Code Institute student template for Codeanywhere. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+- **Navigation**
+    - Featuring at the top of the page, the navigation shows the page name in the top right corner: Cat Jonesy that links to the top of the page.
+    - The other navigation links are to the right: Home, About, Gallery and Contact Us which link to different sections of the same page. 
+    - The navigation is in a font visible and readable for a user and color that contrasts with the background. 
+    - The navigation clearly tells to the user the name of the app and website, and makes the different sections of information easy to find. 
+    ![Menu Bar](/assets/images/menuprint.jpg)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **March 3rd, 2023**
+- **The Header**
+    - The header shows the name of the app, using the other color chosen: Shade of Orange with hand writing type of font theme. 
+    - The header shows an important message that needs to be shared with the worls "Adopt do not shop"
+    - Thi section provides the user with clear information about what the site is and who is the targetted audience. 
 
-## Codeanywhere Reminders
+- **The About Section**
+    - The about section gives details about the cat Jonesy history and has a table with charity names that Jonesy supports from his income online.
+    ![AboutScr](/assets/images/about-page-scr.jpg)
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+- **The Contact Us section**
+    - The contact us section has a form to contact Jonesy and request his interview/ licencing of his videos or an advertisiment. 
+    - The contact us sectio includes social media links as the rest of te pages, so users can find Jonesy's tiktok and instagram pages.
+    ![ContactUsScr](/assets/images/contactus-scr.jpg)
 
-`python3 -m http.server`
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+- **The Gallery**
+    - The gallery section includes some of the unique pictures of Jonesy that cannot be found anywhere else online. 
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+# Testing
+ - I have tested this page in brosers: Chrome and Firefox.
+ - I confimed that this project is responsive, looks good and functions on all standard screen sizes using the devtools device toolbar.
+ - I confirmed that the navigation, header, about, contact us and gallery are all readale and easy to understand. 
+ - I have confirmed that the form works: requires entries in every field, will only accept an email in the email field and the submit button works. 
 
-`http_server`
+ ## Bugs 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+ ### Solved bugs
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+1. During the development of the home page the second circle image was belop the rest of the elements in that section. 
+- It was discovered that display needed to be set to flex in motivation in CSS filw and then heading to appear on its own the width of motiv-head has been changed to 100% 
+- actions above removed the problem.
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+2. When you switch to mobile screen view, there was a margin white line covering motivation images.
+- To fix that saspect ration was set to 1 and motivation width to 100%.
 
-To log into the Heroku toolbelt CLI:
+## Validator Testing 
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- HTML 
+    - No errors were returned when passing through the official W3C validator.
+- CSS 
+    - No errors were returned when passing through the official (Jigsaw) validator.
+- Accessibility
+    - I confimed that the colors and fonts chosen are easy to read and accessible by running it through lighthouse in devtools. 
+    ![Accessibility](/assets/images/accessibility.jpg)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## Unfixed Bugs
 
----
+No unfixed bugs that have been identified. 
 
----------------------------------
+# Deployment 
 
-Bootsrtap template : https://github.com/startbootstrap/startbootstrap-personal
+The site was deployed to Github pages using following steps:
+1. In the Github repository go to the Settings tab;
+2. From the source section select Master Branch/ Main;
+3. Click save and the link to the complete website will be automatically generated by Github.
+
+The lie link can be found here - [Cat Jonesy](https://aslavinska.github.io/cat-jonesy/).
+
+# Credits
+
+## Content
+The code example for layout and social media links was taken from CI Love Running Project. 
+The template for the Read.me file has been taked from Code Institute. 
+
+## Media
+All images were take from private Jonesy official archives. All rights reserved.

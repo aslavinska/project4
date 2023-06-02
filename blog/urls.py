@@ -6,7 +6,7 @@ urlpatterns = [
     path('blog/', views.PostList.as_view(), name='blog'),
 
     path('contact/', contact, name='contact'),
-    path('success/', success, name='success'),
+    path('success/', views.success, name='success'),
     path('about/', views.about, name='about'),
     path('onlinetime/', views.onlinetime, name='onlinetime'),
     path('', views.home, name='home'),
