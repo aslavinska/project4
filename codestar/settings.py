@@ -32,12 +32,17 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["mb2test.herokuapp.com", "localhost", "8000-aslavinska-project4-7uamhidnrbh.ws-eu98.gitpod.io", "django.core.mail.backends.smtp.EmailBackend"]
+ALLOWED_HOSTS = ["mb2test.herokuapp.com", "localhost", "8000-aslavinska-project4-7uamhidnrbh.ws-eu98.gitpod.io"]
 
-EMAIL_HOST = os.environ.get('MAILGUN_SMTP_SERVER', '')
-EMAIL_PORT = os.environ.get('MAILGUN_SMTP_PORT', '')
-EMAIL_HOST_USER = os.environ.get('MAILGUN_SMTP_LOGIN', '')
-EMAIL_HOST_PASSWORD = os.environ.get('MAILGUN_SMTP_PASSWORD', '')
+
+
+SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
+
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'apikey' # this is exactly the value 'apikey'
+EMAIL_HOST_PASSWORD = "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"  # new
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 
 AUTHENTICATION_BACKENDS = [
