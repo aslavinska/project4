@@ -40,7 +40,7 @@ SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
 
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_HOST_USER = 'apikey' # this is exactly the value 'apikey'
-EMAIL_HOST_PASSWORD = "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"  # new
+EMAIL_HOST_PASSWORD = ""  # new
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
