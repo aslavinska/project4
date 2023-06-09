@@ -34,7 +34,7 @@
            "**/core.python*":true
         },
         "editor.defaultFormatter":"esbenp.prettier-vscode",
-        "python.linting.pycodestyleEnabled":true,
+        "python.linting.py tyleEnabled":true,
         "python.terminal.activateEnvironment":false,
         "workbench.iconTheme":"none",
         "extensions.ignoreRecommendations":true,
