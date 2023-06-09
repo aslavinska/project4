@@ -4,20 +4,24 @@
     <div class="masthead">
         <div class="container col-xl-9 mx-auto">
             <div class="row g-0">
-                <div class="card-body">
-                    <!-- Post title goes in these h1 tags -->
-                    <h1 class="card-title">{{ post.title }}</h1>
-                    <!-- Post author goes before the | the post's created date goes after -->
-                    <p class="card-subtitle">{{ post.author }} | {{ post.created_on }}</p>
-                </div>
-                <div class="image-container">
-                    <!-- The featured image URL goes in the src at tribute -->
-                    {% if "placeholder" in post.featured_image.url %}
-                    <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
-                    {% else %}
-                    <img src=" {{ post.featured_image.url }}" width="100%">
-                    {% endif %}
-                </div>
+                
+                    <h2 class="section-heading mb-4">
+                        <!-- Post title goes in these h1 tags -->
+                        <span class="section-heading-upper">{{ post.author }} | {{ post.created_on }}</span>
+                        <!-- Post author goes before the | the pt's created date goes after -->
+                        <span class="section-heading-lower">{{ post.title }}</span>
+                    </h2>
+                
+                    <div class="image-container">
+                        <!-- The featured image URL goes in the src at tribute -->
+                        {% if "placeholder" in post.featured_image.url %}
+                        <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
+                        {% else %}
+                        <img src=" {{ post.featured_image.url }}" width="100%">
+                        {% endif %}
+                        
+                    </div>
+                
             </div>
         </div>
     </div>
@@ -25,7 +29,8 @@
 <div class="container mx-auto">
     <div class="row">
         <div class="col card mb-4  mt-3 left mx-auto top">
-            <div class="card-body">
+            <div class="bg-faded rounded p-5">
+            
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
                 <p class="card-text ">
@@ -59,7 +64,8 @@
                         {% endwith %}
                     </div>
                 </div>
-            </div>
+            
+        </div>
         </div>
     </div>
     <div class="row">
