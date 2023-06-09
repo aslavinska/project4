@@ -92,7 +92,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'codestar.urls'
+ROOT_URLCONF = 'sailorshushu.urls'
 
 TEMPLATES = [
     {
@@ -139,7 +139,7 @@ SOCIALACCOUNT_PROVIDERS = {
 }
 
 
-WSGI_APPLICATION = 'codestar.wsgi.application'
+WSGI_APPLICATION = 'sailorshushu.wsgi.application'
 
 
 DATABASES = {
