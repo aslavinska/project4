@@ -10820,7 +10820,7 @@ p {
 }
 
 .text-faded {
-  color: #f6e1c5;
+  color: #6c757d;
 }
 
 .site-heading {
@@ -10862,6 +10862,7 @@ p {
 
 .bg-faded {
   background-color: #f6e1c5;
+  size: 100%;
 }
 
 .btn-xl {
@@ -10897,6 +10898,10 @@ p {
   #mainNav .navbar-nav .nav-item.active .nav-link:hover {
     color: #e6a756;
   }
+}
+.textarea{
+  position: relative;
+  width: 100%;
 }
 
 .btn {
@@ -10946,13 +10951,13 @@ p {
 }
 @media (min-width: 992px) {
   .intro .intro-img {
-    width: 75%;
+    width: 50%;
     float: right;
   }
   .intro .intro-text {
     left: 0;
-    width: 60%;
-    margin-top: 3rem;
+    width: 45%;
+    margin-top: 1rem;
     position: absolute;
   }
   .intro .intro-text .intro-button {

@@ -36,11 +36,16 @@
                                     {% endif %}
                     
                                     {% load socialaccount %}
-                                    <a href="{% provider_login_url 'github' %}">Login using Github</a>
+                                    <a href="{% provider_login_url 'github' %}" class="btn btn-secondary">
+                                    
+                                        <span>Login with GitHub</span>
+                                      </a>
                                     <br>
-                                    <a href="{% provider_login_url 'google' %}">Login using Google</a>
-                                    <br>
-                                    <a href="{% provider_login_url 'facebook' %}">Login using Facebook</a>
+                                    <a href="{% provider_login_url 'google' %}" class="btn btn-secondary">
+                                        
+                                        <span>Login using Google</span>
+                                      </a>
+                                   
                                     <br>
                                     <button class="btn btn-signup right" type="submit">{% trans "Sign In" %}</button>
                                 </form>
