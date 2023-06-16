@@ -3,6 +3,7 @@ from pathlib import Path
 import dj_database_url
 from django.contrib.messages import constants as messages
 
+
 if os.path.isfile("env.py"):
     import env
 
@@ -20,7 +21,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["mb2test.herokuapp.com", "localhost", "8000-aslavinska-project4-7uamhidnrbh.ws-eu99.gitpod.io"]
+ALLOWED_HOSTS = ["mb2test.herokuapp.com", "localhost", "8000-aslavinska-project4-7uamhidnrbh.ws-eu100.gitpod.io"]
 
 
 
@@ -61,7 +62,7 @@ INSTALLED_APPS = [
     'blog',
 ]
 
-SITE_ID = 2
+SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
