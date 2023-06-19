@@ -92,8 +92,7 @@ class PostEditView(UpdateView):
 class PostDeleteView(DeleteView):
     model = Post
     template_name = 'postdelete.html'
-    success_url = PostList()
-
+    success_url = "/blog"
 
 def contact(request):
         if request.method == 'POST':
