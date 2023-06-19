@@ -1,9 +1,12 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
+from django.urls import reverse_lazy
 from django.core.mail import EmailMessage, send_mail, BadHeaderError
+from django.views.generic.edit import UpdateView, DeleteView
 from .models import Post
 from .forms import CommentForm, ContactForm
+
 
 
 
@@ -77,6 +80,20 @@ class PostLike(View):
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
+class PostEditView(UpdateView):
+    model = Post
+    fields = ['content']
+    template_name = 'postedit.html'
+    def get_success_url(self):
+        slug = self.kwargs["slug"]
+        return reverse("post_detail", kwargs = {"slug":slug})
+
+
+class PostDeleteView(DeleteView):
+    model = Post
+    template_name = 'postdelete.html'
+    success_url = PostList()
+
 
 def contact(request):
         if request.method == 'POST':
@@ -87,12 +104,12 @@ def contact(request):
                 return redirect('success')
         else:
             form = ContactForm()
-        return render(request, 'contact.html', {'form': form})  
+            return render(request, 'contact.html', {'form': form})  
 
         return render(request, 'contact.html', {'form': form})
 
 def success(request):
-        return render(request, 'success.html')
+     return render(request, 'success.html')
 
 
 def about(request):

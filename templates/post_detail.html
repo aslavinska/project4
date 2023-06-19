@@ -12,8 +12,8 @@
                         <span class="section-heading-lower">{{ post.title }}</span>
                         <p>
                             {% if request.user == post.author %}
-                            <a href=# style="color: #333;"><i class="far fa-edit"></i></a>
-                            <a href=# style="color: #333;"><i class="fas fa-trash"></i></a>
+                            <a href="{% url 'postedit' post.slug %}" style="color: #333;"><i class="far fa-edit"></i></a>
+                            <a href="{% url 'postdelete' post.slug %}" style="color: #333;"><i class="fas fa-trash"></i></a>
                             {% endif %}
                         </p>
                         <p>{{ post.body }}</p>

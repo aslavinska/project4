@@ -6,29 +6,37 @@ Users of this will be able to find all the information they need to know about S
 # Features
 
 - **Navigation**
-    - Featuring at the top of the page, the navigation shows the page name in the top right corner: Cat Jonesy that links to the top of the page.
-    - The other navigation links are to the right: Home, About, Gallery and Contact Us which link to different sections of the same page. 
+    - Featuring at the top of the main page, the name of the artist Sailor Shushu and above that is the main menu.
+    - The other navigation links are: Home, Contact, Online Time, About8 me, My Blog , Login/Logout and Register options. 
     - The navigation is in a font visible and readable for a user and color that contrasts with the background. 
     - The navigation clearly tells to the user the name of the app and website, and makes the different sections of information easy to find. 
+    - The coffee theme is chosen as the artist drinks lots of coffee and without the magical drink her art wil not be possible.
+
     ![Menu Bar](/assets/images/menuprint.jpg)
 
 - **The Header**
     - The header shows the name of the app, using the other color chosen: Shade of Orange with hand writing type of font theme. 
-    - The header shows an important message that needs to be shared with the worls "Adopt do not shop"
     - Thi section provides the user with clear information about what the site is and who is the targetted audience. 
 
-- **The About Section**
-    - The about section gives details about the cat Jonesy history and has a table with charity names that Jonesy supports from his income online.
+- **The Contact Me Section**
+    - The contact me section has a form to contact Sailor Shushu for business purposes only. 
+
+- **The Online Times Section**
+    - Highlights online timing when the artist is available to respond to user comments real time.
+
+- **The About Me Section**
+    - The about section gives details about the SailorShushus background.
     ![AboutScr](/assets/images/about-page-scr.jpg)
 
-- **The Contact Us section**
-    - The contact us section has a form to contact Jonesy and request his interview/ licencing of his videos or an advertisiment. 
-    - The contact us sectio includes social media links as the rest of te pages, so users can find Jonesy's tiktok and instagram pages.
+- **My Blog** 
+    - This section contains posts featuring art and small stories behind each art. 
+    - Users can like and comment posts after login in or registering 
+    - Users can read other comments
+    - Only the admin is able to edit posts using UI and not the admin menu. s
+    
+-**Footer**
+ - The fotter includes social media links, so users can find SailorShushu's twitter and instagram pages.
     ![ContactUsScr](/assets/images/contactus-scr.jpg)
-
-
-- **The Gallery**
-    - The gallery section includes some of the unique pictures of Jonesy that cannot be found anywhere else online. 
 
 # Testing
  - I have tested this page in brosers: Chrome and Firefox.
