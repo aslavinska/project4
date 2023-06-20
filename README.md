@@ -58,12 +58,13 @@ Users of this will be able to find all the information they need to know about S
 ## Validator Testing 
 
 - HTML 
-    - No errors were returned when passing through the official W3C validator.
+    - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/).
+    - Every page has been checked and no errors or warnings have been highlighted. 
 - CSS 
-    - No errors were returned when passing through the official (Jigsaw) validator.
+    - No errors were returned when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/).
 - Accessibility
     - I confimed that the colors and fonts chosen are easy to read and accessible by running it through lighthouse in devtools. 
-    ![Accessibility](/assets/images/accessibility.jpg)
+    ![Accessibility](static/assets/accessibility.jpg)
 
 ## Unfixed Bugs
 
