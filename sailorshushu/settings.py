@@ -62,7 +62,7 @@ INSTALLED_APPS = [
     'blog',
 ]
 
-SITE_ID = 1
+SITE_ID = 2
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
@@ -113,13 +113,6 @@ TEMPLATES = [
 
 
 SOCIALACCOUNT_PROVIDERS = {
-    'github': {
-        'APP':{
-            'client_id' : 'f9c8225c44661502e20b',
-            'secret' : '9bed7c4b47ad749d24e4393d1708aeee6dec4507',
-            'key' : ''
-        }
-    },
     'google': {
         'SCOPE': [
             'profile',
