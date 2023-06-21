@@ -59,6 +59,9 @@ Users of this will be able to find all the information they need to know about S
     
     ![ContactUsScr](static/assets/footer.jpg)
 
+# Project Agile Kanban board:
+ - The project kanban board can be found [here](https://github.com/users/aslavinska/projects/2/views/1)
+
 # Testing
  - I have tested this page in brosers: Chrome and Firefox.
  - I confimed that this project is responsive, looks good and functions on all standard screen sizes using the devtools device toolbar.
