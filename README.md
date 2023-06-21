@@ -1,18 +1,18 @@
 # Sailor Shushu blog
 The official website of a British - Latvian Artist Sailor Shushu. This page is created for Sailor Shushu's fans of any age to enjoy her art and discuss it in a friendly community, support charities and to be able to contact Sailor Shushu for official communication abd business offers.
 Users of this will be able to find all the information they need to know about Sailor Shushu: About, Online times when users can chat with the artist real time, Contact form for business enquires, My blog page to disccus new art and book ideas. This site is targeted towards Sailor Shushu's fans, who love her art and want to commiunicate with her. 
-![Responsive](/assets/images/Responsive.jpg)
+![Responsive](static/assets/responsive.jpg)
 
 # Features
 
 - **Navigation**
     - Featuring at the top of the main page, the name of the artist Sailor Shushu and above that is the main menu.
-    - The other navigation links are: Home, Contact, Online Time, About8 me, My Blog , Login/Logout and Register options. 
+    - The other navigation links are: Home, Contact, Online Time, About me, My Blog , Login/Logout and Register options. 
     - The navigation is in a font visible and readable for a user and color that contrasts with the background. 
     - The navigation clearly tells to the user the name of the app and website, and makes the different sections of information easy to find. 
     - The coffee theme is chosen as the artist drinks lots of coffee and without the magical drink her art wil not be possible.
 
-    ![Menu Bar](/assets/images/menuprint.jpg)
+    ![Menu Bar](static/assets/menuprint.jpg)
 
 - **The Header**
     - The header shows the name of the app, using the other color chosen: Shade of Orange with hand writing type of font theme. 
@@ -26,7 +26,7 @@ Users of this will be able to find all the information they need to know about S
 
 - **The About Me Section**
     - The about section gives details about the SailorShushus background.
-    ![AboutScr](/assets/images/about-page-scr.jpg)
+    
 
 - **My Blog** 
     - This section contains posts featuring art and small stories behind each art. 
@@ -35,6 +35,20 @@ Users of this will be able to find all the information they need to know about S
     - Only the admin is able to edit posts using UI and not in the admin menu.
     - Only the admin is able to delete a post without login in to admin menu.
     - In order to approve useer comments he admin needs to login to the admin menu.
+    - In the blog view number of likes and comments is visible under each post. 
+    ![ContactUsScr](static/assets/blogscr.jpg)
+
+    - When a post is opened the the admin will see edit and delete post buttons, that will allow the admin to update posts without going into the admin menu. 
+    ![ContactUsScr](static/assets/post1.jpg)
+
+    - When a user is logged in the user will be able to like the posts and leave comments. 
+
+    ![ContactUsScr](static/assets/post2.jpg)
+
+
+    - When a comment is submitted a user will see a message that the comment has been submitte for the approval and the admin must approve comments before they can appear under the post. 
+
+    ![ContactUsScr](static/assets/postcomment.jpg)
 
 -**Login/Logout/Register**
     - Users can register using their email and password, the admin needs to approve every user in  the admin menu
@@ -42,13 +56,16 @@ Users of this will be able to find all the information they need to know about S
     
 -**Footer**
  - The fotter includes social media links, so users can find SailorShushu's twitter and instagram pages.
-    ![ContactUsScr](/assets/images/contactus-scr.jpg)
+    
+    ![ContactUsScr](static/assets/footer.jpg)
 
 # Testing
  - I have tested this page in brosers: Chrome and Firefox.
  - I confimed that this project is responsive, looks good and functions on all standard screen sizes using the devtools device toolbar.
- - I confirmed that the navigation, header, about, contact us and gallery are all readale and easy to understand. 
+ - I confirmed that the navigation, home, contact, online time, about me,my blog and login/register/logout are all readable and easy to understand. 
  - I have confirmed that the form works: requires entries in every field, will only accept an email in the email field and the submit button works. 
+ - I can confirm that post edit and delete functions work in the UI and models are updated without entering the admin panel.
+ 
 
  ## Bugs 
 
@@ -87,4 +104,4 @@ The template for the Read.me file has been taked from Code Institute.
 Boot Strap Free template can be found here - [Template](https://startbootstrap.com/theme/business-casual)
 
 ## Media
-All images were take from private Sailor Shushu official archives. All rights reserved.
+All images in the blog and main pages were take from private Sailor Shushu official archives. All rights reserved.
