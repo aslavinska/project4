@@ -85,6 +85,14 @@ Users of this will be able to find all the information they need to know about S
 - Accessibility
     - I confimed that the colors and fonts chosen are easy to read and accessible by running it through lighthouse in devtools. 
     ![Accessibility](static/assets/accessibility.jpg)
+- JS 
+    - No errors were found using [jshint validator](https://jshint.com/)
+
+## Manual Testing
+
+- Every page has been manually tested:
+    - Screen resize on different devices 
+    - Making sure everything is visible and does not look out of place 
 
 ## Unfixed Bugs
 
@@ -105,6 +113,8 @@ The lie link can be found here - [Sailor Shushu Art Blog ](https://aslavinska.gi
 The code example for layout and social media links was taken from Code Institute I think therefore I blog Project. 
 The template for the Read.me file has been taked from Code Institute. 
 Boot Strap Free template can be found here - [Template](https://startbootstrap.com/theme/business-casual)
+Tutorial to add social media sign up can be found [here.](https://www.codesnail.com/google-authentication-in-django/)
+Tutorial to edit and remove posts can be found [here.](https://legionscript.medium.com/building-a-social-media-site-with-python-and-django-part-4-edit-delete-posts-add-comments-8e6ca1ef0441)
 
 ## Media
 All images in the blog and main pages were take from private Sailor Shushu official archives. All rights reserved.
