@@ -10792,7 +10792,7 @@ textarea.form-control-lg {
   }
 }
 body {
-  background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../static/assets/bg.jpg");
+  background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("https://res.cloudinary.com/dw9bkbye5/image/upload/v1687427892/static/assets/bg.714ec5f53145.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
