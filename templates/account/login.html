@@ -33,14 +33,16 @@
                     
                                     {% load socialaccount %}
                                     <br>
+
+
+                                    <button class="btn btn-secondary" type="submit">{% trans "Sign In" %}</button>
+                                    <br>
+                                    <br>
                                     {% csrf_token %}
                                     <a href="{% provider_login_url 'google' %}" class="btn btn-secondary">
                                         
                                         <span>Login using Google</span>
                                       </a>
-                                    <br>
-                                    <br>
-                                    <button class="btn btn-signup right" type="submit">{% trans "Sign In" %}</button>
                                 </form>
                             </div>
                         </div>
