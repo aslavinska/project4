@@ -1,12 +1,14 @@
+from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render, get_object_or_404, reverse, redirect
+from datetime import datetime, timedelta
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from django.core.mail import EmailMessage, send_mail, BadHeaderError
 from django.views.generic.edit import UpdateView, DeleteView
-from .models import Post
+from django.contrib import auth
+from .models import *
 from .forms import CommentForm, ContactForm
-
 
 
 
@@ -121,3 +123,71 @@ def home(request):
 
 def onlinetime(request):
     return render(request, 'onlinetime.html',{})
+
+
+def booking(request):
+    weekdays = validWeekday(22)
+    validateWeekdays = isWeekdayValid(weekdays)
+
+    if request.method == 'POST':
+        service = request.POST.get('service')
+        style = request.POST.get('style')
+        day = request.POST.get('day')
+        user = request.user
+        print(service, style, user)
+        
+        if service == None:
+            messages.success(request, "Please Select A Service!")
+            return redirect('booking')
+
+        if style == None:
+            messages.success(request, "Please Select A Style!")
+            return redirect('booking')
+        
+
+        print("This is working")
+
+        appointment = Appointment.objects.create(
+               service = service,
+               style= style,
+               day = day,
+               user = user,
+            )
+        #appointment.save(force_insert=True)
+        print(appointment)
+        return redirect('bookingSubmit')
+
+    return render(request, 'booking.html', {
+            'weekdays':weekdays,
+            'validateWeekdays':validateWeekdays,
+        })
+
+def bookingSubmit(request):
+    user = request.user
+
+    #Get stored data from django session:
+    service = request.session.get('service')
+    style = request.session.get('style')
+    
+    if request.method == 'POST':
+        return redirect('booking')
+
+    return render(request, 'bookingSubmit.html')
+
+def validWeekday(days):
+    #Loop days you want in the next 21 days:
+    today = datetime.now()
+    weekdays = []
+    for i in range (0, days):
+        x = today + timedelta(days=i)
+        y = x.strftime('%A')
+        if y == 'Monday' or y == 'Saturday' or y == 'Wednesday':
+            weekdays.append(x.strftime('%Y-%m-%d'))
+    return weekdays
+    
+def isWeekdayValid(x):
+    validateWeekdays = []
+    for j in x:
+        if Appointment.objects.filter(day=j).count() < 10:
+            validateWeekdays.append(j)
+    return validateWeekdays

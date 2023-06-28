@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+<section class="page-section cta">
+<h1 class="text-center  mt-3">Online Booking for a Commission</h1>
+
+{% if user.is_authenticated %}
+
+
+
+<div class="shadow p-4 mb-5 bg-body bg-body rounded text-black  m-5 ">
+    <form method="POST" action="{% url 'booking' %}" class="me-2 ms-2" required>
+        {% csrf_token %}
+        <h2 class="section-heading mb-4">
+        <!--input service-->
+        <div>
+            <h3 class="section-heading-lower">Select Media:</h3>
+            <select class="form-select fs-3" name="service">
+                <option value="Digital">Digital</option>
+                <option value="Water Colour">Water Colour</option>
+                <option value="Mix Media">Mix Media</option>
+                <option value="Indicidual Request">Individual Request</option>
+            </select>
+        </div>
+        </h2>
+        <h2 class="section-heading mb-4">
+            <div>
+                <h3 class="section-heading-lower">Select Style:</h3>
+                <select class="form-select fs-3" name="style">
+                  <option value="Anime">Anime</option>
+                  <option value="Traditional">Traditional</option>
+                  <option value="Pop Art">Pop Art</option>
+                  <option value="Disney">Disney</option>
+              </select>
+            </select>
+        </div>
+    </h2>
+    <h2 class="section-heading mb-4">
+            <div >
+                <h3 class="section-heading-lower">Select Day by which :</h3>
+                <select class="form-select fs-3" name="day">
+                    {% for validateWeekday in validateWeekdays %}
+                    <option value="{{validateWeekday}}">{{validateWeekday}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </h2>
+            <br/>
+            <button type="submit" class="btn btn-primary text-white">Continue</button>
+        </div>
+    </form>
+</div>
+
+{% else %}
+
+<div class="shadow p-4 mb-5 bg-body bg-body rounded text-black  m-5 ">
+    <h1 class="p-2  me-3">You Are Not Signed in!</h1>
+    <a href="{% url 'register' %}" class="btn btn-primary shadow text-center">Sign in</a>
+</div>
+
+{% endif %}
+
+</section>
+{% endblock %}

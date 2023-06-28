@@ -1,8 +1,8 @@
 import os
 from pathlib import Path
-import dj_database_url
-from django.contrib.messages import constants as messages
 
+from django.contrib.messages import constants as messages
+import dj_database_url
 
 if os.path.isfile("env.py"):
     import env
@@ -19,22 +19,20 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-X_FRAME_OPTIONS = 'SAMEORIGIN'
+#X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ["https://aslavinska-project4.herokuapp.com/", "aslavinska-project4.herokuapp.com", "localhost", "8000-aslavinska-project4-7uamhidnrbh.ws-eu100.gitpod.io"]
+ALLOWED_HOSTS = ["https://aslavinska-project4.herokuapp.com/", "aslavinska-project4.herokuapp.com", "localhost", "8000-aslavinska-project4-7uamhidnrbh.ws-eu101.gitpod.io"]
 
 
 
 SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
 
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'apikey' # this is exactly the value 'apikey'
-EMAIL_HOST_PASSWORD = ""  # new
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-
+DEFAULT_FROM_EMAIL = "mail@example.com"
+EMAIL_HOST = "localhost"
+EMAIL_PORT = "1025"
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
