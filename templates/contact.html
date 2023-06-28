@@ -1,3 +1,4 @@
+<title>Contact Me</title>
 {% extends "base.html" %}
 {% block content %}
 
@@ -13,17 +14,17 @@
                     <form action="/contact/" method="post">
                         {% csrf_token %}
                         {% for field in form %}
-                            <div class="list-unstyled list-hours mb-5 text-center mx-auto " >
-                                {{ field.errors }}
-                                {{ field.label_tag }} {{ field }}
-                            </div>
+                        <div class="list-unstyled list-hours mb-5 text-center mx-auto ">
+                            {{ field.errors }}
+                            {{ field.label_tag }} {{ field }}
+                        </div>
                         {% endfor %}
                         <input type="submit" value="Submit">
-                     </form>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
- {% endblock content %}
+{% endblock content %}

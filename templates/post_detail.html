@@ -1,33 +1,35 @@
+<title>Post Details</title>
+
 {% extends 'base.html' %} {% block content %}
 {% load crispy_forms_tags %}
 <section class="page-section cta">
     <div class="masthead">
         <div class="container col-xl-9 mx-auto">
             <div class="row g-0">
-                
-                    <h2 class="section-heading mb-4">
-                        <!-- Post title goes in these h1 tags -->
-                        <span class="section-heading-upper">{{ post.author }} | {{ post.created_on }}</span>
-                        <!-- Post author goes before the | the pt's created date goes after -->
-                        <span class="section-heading-lower">{{ post.title }}</span>
-                        <p>
-                            {% if request.user == post.author %}
-                            <a href="{% url 'postedit' post.slug %}" style="color: #333;"><i class="far fa-edit"></i></a>
-                            <a href="{% url 'postdelete' post.slug %}" style="color: #333;"><i class="fas fa-trash"></i></a>
-                            {% endif %}
-                        </p>
-                        <p>{{ post.body }}</p>
-                    </h2>
-                    <div class="image-container">
-                        <!-- The featured image URL goes in the src at tribute -->
-                        {% if "placeholder" in post.featured_image.url %}
-                        <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
-                        {% else %}
-                        <img src=" {{ post.featured_image.url }}" width="100%">
+
+                <h2 class="section-heading mb-4">
+                    <!-- Post title goes in these h1 tags -->
+                    <span class="section-heading-upper">{{ post.author }} | {{ post.created_on }}</span>
+                    <!-- Post author goes before the | the pt's created date goes after -->
+                    <span class="section-heading-lower">{{ post.title }}</span>
+                    <p>
+                        {% if request.user == post.author %}
+                        <a href="{% url 'postedit' post.slug %}" style="color: #333;"><i class="far fa-edit"></i></a>
+                        <a href="{% url 'postdelete' post.slug %}" style="color: #333;"><i class="fas fa-trash"></i></a>
                         {% endif %}
-                        
-                    </div>
-                
+                    </p>
+                    <p>{{ post.body }}</p>
+                </h2>
+                <div class="image-container">
+                    <!-- The featured image URL goes in the src at tribute -->
+                    {% if "placeholder" in post.featured_image.url %}
+                    <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
+                    {% else %}
+                    <img src=" {{ post.featured_image.url }}" width="100%">
+                    {% endif %}
+
+                </div>
+
             </div>
         </div>
 
@@ -37,7 +39,7 @@
     <div class="row">
         <div class="col card mb-6  mt-4 left mx-auto">
             <h5 class="text-faded">
-            
+
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
                 <p class="card-text ">
@@ -51,16 +53,18 @@
                             <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
                                 {% csrf_token %}
                                 {% if liked %}
-                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="fas fa-heart"></i></button>
+                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
+                                        class="fas fa-heart"></i></button>
                                 {% else %}
-                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="far fa-heart"></i></button>
+                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
+                                        class="far fa-heart"></i></button>
                                 {% endif %}
                             </form>
                             {% else %}
                             <span class="text-secondary"><i class="far fa-heart"></i></span>
                             {% endif %}
-                        <!-- The number of likes goes before the closing strong tag -->
-                        <span class="text-secondary">{{ post.number_of_likes }} </span>
+                            <!-- The number of likes goes before the closing strong tag -->
+                            <span class="text-secondary">{{ post.number_of_likes }} </span>
                         </strong>
                     </div>
                     <div class="col-1">
@@ -71,7 +75,7 @@
                         {% endwith %}
                     </div>
                 </div>
-            
+
             </h5>
         </div>
     </div>
@@ -96,29 +100,29 @@
                         </span> wrote:
                     </p>
                     <!-- The body of the comment goes before the | -->
-                    <div class = "col-xl-9 col-lg-10 mx-auto"> {{ comment.body | linebreaks }}</div>
+                    <div class="col-xl-9 col-lg-10 mx-auto"> {{ comment.body | linebreaks }}</div>
                 </div>
                 <!-- Our for loop ends here -->
                 {% endfor %}
             </div>
         </div>
         <div class="col-md-6 card mb-4 mt-3 mx-auto">
-            <div class="card-body" >
+            <div class="card-body">
                 <!-- For later -->
                 {% if commented %}
-                    <div class="alert alert-success" role="alert">
-                        Your comment is awaiting approval
-                    </div>
+                <div class="alert alert-success" role="alert">
+                    Your comment is awaiting approval
+                </div>
                 {% endif%}
 
                 {% if user.is_authenticated %}
-                    <h3>Leave a comment:</h3>
-                    <p>Posting as: {{ user.username }}</p>
-                    <form class="comment_form" method="post" style="margin-top: 3em;" size="20%">
-                        {{ comment_form | crispy }}
-                        {% csrf_token %}
-                        <button type="submit" class="btn btn-signup btn-lg" >Submit</button>
-                    </form>
+                <h3>Leave a comment:</h3>
+                <p>Posting as: {{ user.username }}</p>
+                <form class="comment_form" method="post" style="margin-top: 3em;" size="20%">
+                    {{ comment_form | crispy }}
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                </form>
                 {% endif %}
             </div>
         </div>

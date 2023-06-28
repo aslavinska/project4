@@ -11,6 +11,9 @@ urlpatterns = [
     path('onlinetime/', views.onlinetime, name='onlinetime'),
     path('', views.home, name='home'),
     path('booking', views.booking, name='booking'),
+    path('userpanel/', views.userPanel, name='userPanel'),
+    path('user-update/<int:id>', views.userUpdate, name='userUpdate'),
+    path('user-update-submit/<int:id>', views.userUpdateSubmit, name='userUpdateSubmit'),
         
     path('booking-submit', views.bookingSubmit, name='bookingSubmit'),
    

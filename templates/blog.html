@@ -1,3 +1,4 @@
+<title>My Blog</title>
 {% extends "base.html" %}
 
 {% block content %}
@@ -14,9 +15,11 @@
                                 <div class="image-container">
                                     {% if "placeholder" in post.featured_image.url %}
                                     <img class="card-img-top"
-                                        src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/02397fc5-7434-4a31-8fe9-48384891fd6e/dfudhsg-aeac5fcc-1b5c-44f4-a803-4af2b1d022f8.jpg/v1/fill/w_783,h_1021,q_70,strp/sailor_moon_magical_flights__by_sailorshushu_dfudhsg-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MzAwMCIsInBhdGgiOiJcL2ZcLzAyMzk3ZmM1LTc0MzQtNGEzMS04ZmU5LTQ4Mzg0ODkxZmQ2ZVwvZGZ1ZGhzZy1hZWFjNWZjYy0xYjVjLTQ0ZjQtYTgwMy00YWYyYjFkMDIyZjguanBnIiwid2lkdGgiOiI8PTIzMDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.TawbN3Hw4-9qh-7ZmLZzuREONQq0-IoT-MaV43Gcuv8" alt="Image is not available">
+                                        src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/02397fc5-7434-4a31-8fe9-48384891fd6e/dfudhsg-aeac5fcc-1b5c-44f4-a803-4af2b1d022f8.jpg/v1/fill/w_783,h_1021,q_70,strp/sailor_moon_magical_flights__by_sailorshushu_dfudhsg-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MzAwMCIsInBhdGgiOiJcL2ZcLzAyMzk3ZmM1LTc0MzQtNGEzMS04ZmU5LTQ4Mzg0ODkxZmQ2ZVwvZGZ1ZGhzZy1hZWFjNWZjYy0xYjVjLTQ0ZjQtYTgwMy00YWYyYjFkMDIyZjguanBnIiwid2lkdGgiOiI8PTIzMDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.TawbN3Hw4-9qh-7ZmLZzuREONQq0-IoT-MaV43Gcuv8"
+                                        alt="Image is not available">
                                     {% else %}
-                                    <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="Image is not Aailable">
+                                    <img class="card-img-top" src=" {{ post.featured_image.url }}"
+                                        alt="Image is not Aailable">
                                     {% endif %}
                                     <div class="image-flash">
                                         <p class="author">Author: {{ post.author }}</p>
@@ -28,8 +31,9 @@
                                 </a>
                                 <hr />
                                 <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
-                                    {{ post.number_of_likes }} <i class="far fa-comment"></i> {{ post.comments.count }}</p>
-                            
+                                    {{ post.number_of_likes }} <i class="far fa-comment"></i> {{ post.comments.count }}
+                                </p>
+
                             </div>
                         </div>
                     </div>
@@ -38,7 +42,7 @@
                 <div class="row">
                     {% endif %}
                     {% endfor %}
-    
+
                 </div>
                 {% if is_paginated %}
                 <nav aria-label="Page navigation">
@@ -48,7 +52,7 @@
                         {% endif %}
                         {% if page_obj.has_next %}
                         <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-            
+
                         {% endif %}
                     </ul>
                 </nav>

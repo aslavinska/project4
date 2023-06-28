@@ -1,6 +1,6 @@
 # Sailor Shushu blog
 The official website of a British - Latvian Artist Sailor Shushu. This page is created for Sailor Shushu's fans of any age to enjoy her art and discuss it in a friendly community, support charities and to be able to contact Sailor Shushu for official communication abd business offers.
-Users of this will be able to find all the information they need to know about Sailor Shushu: About, Online times when users can chat with the artist real time, Contact form for business enquires, My blog page to disccus new art and book ideas. This site is targeted towards Sailor Shushu's fans, who love her art and want to commiunicate with her. 
+Users of this will be able to find all the information they need to know about Sailor Shushu: About, Online times when users can chat with the artist real time, Contact form for business enquires, My blog page to disccus new art and book ideas, Booking online for comission requests. This site is targeted towards Sailor Shushu's fans, who love her art and want to commiunicate with her. 
 ![Responsive](static/assets/responsive.jpg)
 
 # Features
@@ -13,6 +13,10 @@ Users of this will be able to find all the information they need to know about S
     - The coffee theme is chosen as the artist drinks lots of coffee and without the magical drink her art wil not be possible.
 
     ![Menu Bar](static/assets/menuprint.jpg)
+
+    After User loges in, the menu panel will look like this: 
+
+    ![Menu Bar](static/assets/menuprintlogged.jpg)
 
 - **The Header**
     - The header shows the name of the app, using the other color chosen: Shade of Orange with hand writing type of font theme. 
@@ -36,24 +40,35 @@ Users of this will be able to find all the information they need to know about S
     - Only the admin is able to delete a post without login in to admin menu.
     - In order to approve useer comments he admin needs to login to the admin menu.
     - In the blog view number of likes and comments is visible under each post. 
-    ![ContactUsScr](static/assets/blogscr.jpg)
+    ![blogscr](static/assets/blogscr.jpg)
 
     - When a post is opened the the admin will see edit and delete post buttons, that will allow the admin to update posts without going into the admin menu. 
-    ![ContactUsScr](static/assets/post1.jpg)
+    ![post1](static/assets/post1.jpg)
 
     - When a user is logged in the user will be able to like the posts and leave comments. 
 
-    ![ContactUsScr](static/assets/post2.jpg)
+    ![post2](static/assets/post2.jpg)
 
 
     - When a comment is submitted a user will see a message that the comment has been submitte for the approval and the admin must approve comments before they can appear under the post. 
 
-    ![ContactUsScr](static/assets/postcomment.jpg)
+    ![postcomment](static/assets/postcomment.jpg)
+
+    - The admin or the author of the blog can edit or delete the post
+     ![postedit](static/assets/updateBlog.jpg)
+     ![postdelete](static/assets/deleteBlog.jpg)
 
 -**Login/Logout/Register**
     - Users can register using their email and password, the admin needs to approve every user in  the admin menu
     - Users are able to use a google account to register, the website will redirect them to the google sign in menu.
     
+-**User Panel**
+    - Here users will be able to find their details username and email and commission requests that they have submitted in the Commission Request menu. 
+    ![UserPanel](static/assets/userpanel.jpg)
+    - When user click on edit button the user can edit their commission request
+    ![UserPanelEdit](static/assets/userpaneleditcom.jpg)
+    - The User will be redirected to the final notification message before redirecting back to the user panel main page.
+    ![UserPanelEditConfirm](static/assets/userpaneleditcomconfirm.jpg)
 -**Footer**
  - The fotter includes social media links, so users can find SailorShushu's twitter and instagram pages.
     

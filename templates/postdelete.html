@@ -1,3 +1,4 @@
+<title>Delete Post</title>
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
@@ -19,13 +20,13 @@
                         <div class="col-md-5 col-sm-12">
                             <h5>Are You Sure?</h5>
                             <p>You are about to delete this post, this cannot be undone.</p>
-                        <form method="POST">
-                            {% csrf_token %}
-                            <div class="d-grid gap-2">
-                                <button type="submit" class="btn btn-danger">Delete</button>
-                            </div>
-                        </form>
-                    </div>
+                            <form method="POST">
+                                {% csrf_token %}
+                                <div class="d-grid gap-2">
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
