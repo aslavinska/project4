@@ -63,7 +63,7 @@ class Comment(models.Model):
         return f"Comment {self.body} by {self.name}"
 
 
-class Appointment(models.Model):
+class Commission(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     service = models.CharField(max_length=50, choices=SERVICE_CHOICES, default="Digital")
     style = models.CharField(max_length=50, choices=STYLE_CHOICES, default="Disney")

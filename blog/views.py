@@ -126,7 +126,7 @@ def onlinetime(request):
     return render(request, 'onlinetime.html',{})
 
 
-def booking(request):
+def commission(request):
     weekdays = validWeekday(22)
     validateWeekdays = isWeekdayValid(weekdays)
 
@@ -139,26 +139,25 @@ def booking(request):
         
         if service == None:
             messages.success(request, "Please Select A Service!")
-            return redirect('booking')
+            return redirect('commission')
 
         if style == None:
             messages.success(request, "Please Select A Style!")
-            return redirect('booking')
+            return redirect('commission')
         
 
         print("This is working")
 
-        appointment = Appointment.objects.create(
+        commission = Commission.objects.create(
                service = service,
                style= style,
                day = day,
                user = user,
             )
-        #appointment.save(force_insert=True)
-        print(appointment)
+     
         return redirect('bookingSubmit')
 
-    return render(request, 'booking.html', {
+    return render(request, 'commission.html', {
             'weekdays':weekdays,
             'validateWeekdays':validateWeekdays,
         })
@@ -169,7 +168,7 @@ def bookingSubmit(request):
     style = request.session.get('style')
     
     if request.method == 'POST':
-        return redirect('booking')
+        return redirect('commission')
 
     return render(request, 'bookingSubmit.html')
 
@@ -187,22 +186,21 @@ def validWeekday(days):
 def isWeekdayValid(x):
     validateWeekdays = []
     for j in x:
-        if Appointment.objects.filter(day=j).count() < 10:
+        if Commission.objects.filter(day=j).count() < 10:
             validateWeekdays.append(j)
     return validateWeekdays
 
 def userPanel(request):
     user = request.user
-    appointments = Appointment.objects.filter(user=user).order_by('day')
+    commissions = Commission.objects.filter(user=user).order_by('day')
     return render(request, 'userPanel.html', {
         'user':user,
-        'appointments':appointments,
+        'commissions':commissions,
     })
 
 def userUpdate(request, id):
-    appointment = Appointment.objects.get(pk=id)
-    userdatepicked = appointment.day
-    #Copy  booking:
+    commission = Commission.objects.get(pk=id)
+    userdatepicked = commission.day
     today = datetime.today()
     minDate = today.strftime('%Y-%m-%d')
 
@@ -252,7 +250,7 @@ def userUpdateSubmit(request, id):
     
     #Only show the time of the day that has not been selected before and the time he is editing:
    
-    appointment = Appointment.objects.get(pk=id)
+    commission = Commission.objects.get(pk=id)
 
     if request.method == 'POST':
       
@@ -261,9 +259,9 @@ def userUpdateSubmit(request, id):
         if service != None:
             if day <= maxDate and day >= minDate:
                 if date == 'Monday' or date == 'Saturday' or date == 'Wednesday':
-                    if Appointment.objects.filter(day=day).count() < 11:
+                    if Commission.objects.filter(day=day).count() < 11:
                         
-                        AppointmentForm = Appointment.objects.filter(pk=id).update(
+                        CommissionForm = Commission.objects.filter(pk=id).update(
                                 user = user,
                                 service = service,
                                 day = day,

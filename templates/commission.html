@@ -3,15 +3,14 @@
 
 {% block content %}
 {% load static %}
+{% if user.is_authenticated %}
 <section class="page-section cta">
     <h1 class="text-center  mt-3">Online Booking for a Commission</h1>
-
-    {% if user.is_authenticated %}
 
 
 
     <div class="shadow p-4 mb-5 bg-body bg-body rounded text-black  m-5 ">
-        <form method="POST" action="{% url 'booking' %}" class="me-2 ms-2" required>
+        <form method="POST" action="{% url 'commission' %}" class="me-2 ms-2" required>
             {% csrf_token %}
             <h2 class="section-heading mb-4">
                 <!--input service-->
@@ -52,15 +51,15 @@
     </div>
     </form>
     </div>
-
-    {% else %}
-
-    <div class="shadow p-4 mb-5 bg-body bg-body rounded text-black  m-5 ">
-        <h1 class="p-2  me-3">You Are Not Signed in!</h1>
-        <a href="{% url 'register' %}" class="btn btn-primary shadow text-center">Sign in</a>
-    </div>
-
-    {% endif %}
-
 </section>
+{% else %}
+<section class="page-section cta">
+    <div class="container">
+<div class="shadow p-4 mb-5 bg-body bg-body rounded text-black  m-5 ">
+    <h1 class="p-2  me-3">You Are Not Signed in!</h1>
+    <a href="{% url 'account_signup' %}" class="btn btn-primary shadow text-center">Sign in</a>
+</div>
+</div>
+</section>
+{% endif %}
 {% endblock %}
