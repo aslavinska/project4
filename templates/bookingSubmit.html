@@ -2,33 +2,33 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-
-
-
+{% if user.is_authenticated %}
 <section class="page-section cta">
-    {% if user.is_authenticated %}
-    <h1 class="text-center fPersian mt-3">Online Booking for a Commission</h1>
+    <div class="cta-inner bg-faded text-center rounded">
+        <h2 class="section-heading mb-4">
+            <span class="section-heading-lower">Online Booking for a Commission</span>
 
-    <div class="shadow p-4 mb-5 bg-body bg-body rounded text-black text-center m-5">
-        <form method="POST" action="{% url 'bookingSubmit' %}" class="me-2 ms-2" required>
-            {% csrf_token %}
+            <div class="shadow p-4 mb-5 bg-body bg-body rounded text-black text-center m-5">
+                <form method="POST" action="{% url 'bookingSubmit' %}" class="me-2 ms-2" required>
+                    {% csrf_token %}
 
-            <!--input time-->
-            <h3 class="section-heading-upper">Your commission request has been successfully submitted.</h3>
-            <h3 class="section-heading-lower">Please click continue.</h3>
-            <button type="submit" class="btn btn-secondary">Continue</button>
+                    <!--input time-->
+                    <span class="section-heading-upper">Your commission request has been successfully submitted.</span>
+                    <span class="section-heading-lower">Please click continue.</span>
+                    <button type="submit" class="btn btn-secondary">Continue</button>
 
-        </form>
+                </form>
+            </div>
+
+            {% else %}
+
+            <div class="shadow p-4 mb-5 bg-body bg-body rounded text-black  m-5">
+                <h1 class="p-2  me-3">First Sign in!</h1>
+                <a href="{% url 'login' %}" class="btn btn-primary text-white">Sign in</a>
+            </div>
+
+            {% endif %}
+        </h2>
     </div>
-
-    {% else %}
-
-    <div class="shadow p-4 mb-5 bg-body bg-body rounded text-black  m-5">
-        <h1 class="p-2  me-3">First Sign in!</h1>
-        <a href="{% url 'login' %}" class="btn btn-primary text-white">Sign in</a>
-    </div>
-
-    {% endif %}
-
 </section>
 {% endblock %}

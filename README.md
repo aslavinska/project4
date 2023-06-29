@@ -67,6 +67,16 @@ Users of this will be able to find all the information they need to know about S
 
 ![register](static/assets/register.jpg)
     
+
+-**Commission Request**
+
+    - Here user will be able to request a commission from the artist.
+![Commission](static/assets/commissionrequest.jpg)
+
+    - After user click continue a confirmation tab will be opened. 
+![CommissionConfirm](static/assets/commissionconfirm.jpg)
+
+
 -**User Panel**
     - Here users will be able to find their details username and email and commission requests that they have submitted in the Commission Request menu. 
 

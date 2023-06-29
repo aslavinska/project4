@@ -5,11 +5,13 @@
 
 
 
-<section class="page-section cta">
     {% if user.is_authenticated %}
-    <!--if 24hrs before nobat-->
+  
+    <section class="page-section cta">
+        <div class="cta-inner bg-faded text-center rounded">
+            <h2 class="section-heading mb-4">
 
-    <h1 class="m-0 text-center text-white">Edit Commission</h1>
+    <span class="section-heading-lower">Edit Commission</span>
 
     <div class="shadow p-4 mb-5 bg-body bg-body rounded text-black  m-5 ">
         <form method="post" action="{% url 'userUpdate' id %}" class="me-2 ms-2" required>
@@ -58,7 +60,6 @@
 
 
 
-
     {% else %}
 
     <section class="page-section cta">
@@ -79,6 +80,7 @@
         </div>
     </section>
     {% endif %}
+    
 
 </section>
 {% endblock %}

@@ -5,50 +5,63 @@
 {% load static %}
 {% if user.is_authenticated %}
 <section class="page-section cta">
-    <h1 class="text-center  mt-3">Online Booking for a Commission</h1>
+    <div class="cta-inner bg-faded text-center rounded">
+    <h2 class="section-heading mb-4">
+        
+            <span class="section-heading-lower">Online Booking for a Commission</span>
 
-    <div class="shadow p-4 mb-5 bg-body bg-body rounded text-black  m-5 ">
-        <form method="POST" action="{% url 'commission' %}" class="me-2 ms-2" required>
-            {% csrf_token %}
-            <h2 class="section-heading mb-4">
-                
-                <div>
-                    <h3 class="section-heading-lower">Select Media:</h3>
-                    <select class="form-select fs-3" name="service">
-                        <option value="Digital">Digital</option>
-                        <option value="Water Colour">Water Colour</option>
-                        <option value="Mix Media">Mix Media</option>
-                        <option value="Indicidual Request">Individual Request</option>
-                    </select>
-                </div>
-            </h2>
-            <h2 class="section-heading mb-4">
-                <div>
-                    <h3 class="section-heading-lower">Select Style:</h3>
-                    <select class="form-select fs-3" name="style">
-                        <option value="Anime">Anime</option>
-                        <option value="Traditional">Traditional</option>
-                        <option value="Pop Art">Pop Art</option>
-                        <option value="Disney">Disney</option>
-                    </select>
-                    </select>
-                </div>
-            </h2>
-            <h2 class="section-heading mb-4">
-                <div>
-                    <h3 class="section-heading-lower">Select Day by which :</h3>
-                    <select class="form-select fs-3" name="day">
-                        {% for validateWeekday in validateWeekdays %}
-                        <option value="{{validateWeekday}}">{{validateWeekday}}</option>
-                        {% endfor %}
-                    </select>
-                </div>
-            </h2>
-            <br />
-            <button type="submit" class="btn btn-primary text-white">Continue</button>
-    </div>
-    </form>
-    </div>
+            <span class="section-heading-upper">I will email you the confirmation and pricing, then we can discuss
+                details via telegram @sailorshushu </span>
+
+            <div class="shadow p-4 mb-5 bg-body bg-body rounded text-black  m-5 ">
+                <form method="POST" action="{% url 'commission' %}" class="me-2 ms-2" required>
+                    {% csrf_token %}
+                    <h2 class="section-heading mb-4">
+
+                        <div>
+                            <h3 class="section-heading-lower">Select Media:</h3>
+                            <select class="form-select fs-3" name="service">
+                                <option value="Digital">Digital</option>
+                                <option value="Water Colour">Water Colour</option>
+                                <option value="Mix Media">Mix Media</option>
+                                <option value="Indicidual Request">Individual Request</option>
+                            </select>
+                        </div>
+                    </h2>
+                    <h2 class="section-heading mb-4">
+                        <div>
+                            <h3 class="section-heading-lower">Select Style:</h3>
+                            <select class="form-select fs-3" name="style">
+                                <option value="Anime">Anime</option>
+                                <option value="Traditional">Traditional</option>
+                                <option value="Pop Art">Pop Art</option>
+                                <option value="Disney">Disney</option>
+                            </select>
+                            </select>
+                        </div>
+                    </h2>
+                    <h2 class="section-heading mb-4">
+                        <div>
+                            <h3 class="section-heading-lower">Select Deadline:</h3>
+                            <select class="form-select fs-3" name="day">
+                                {% for validateWeekday in validateWeekdays %}
+                                <option value="{{validateWeekday}}">{{validateWeekday}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </h2>
+                    <br />
+                    <button type="submit" class="btn btn-primary text-white">Continue</button>
+
+            
+            </form>
+            </div>
+        
+    </h2>
+    
+</div>
+
+    
 </section>
 {% else %}
 <section class="page-section cta">
