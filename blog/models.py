@@ -2,8 +2,7 @@ from django.db import models
 from datetime import datetime
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
-from django.core.mail import send_mail  
-
+from django.core.mail import send_mail
 
 
 STATUS = ((0, "Draft"), (1, "Published"))
@@ -13,7 +12,7 @@ SERVICE_CHOICES = (
     ("Water Colour", "Water Colour"),
     ("Mix Media", "Mix Media"),
     ("Indicidual Request", "Indicidual Request"),
-    )
+)
 STYLE_CHOICES = (
     ("Anime", "Anime"),
     ("Traditional", "Traditional"),
@@ -64,9 +63,13 @@ class Comment(models.Model):
 
 
 class Commission(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
-    service = models.CharField(max_length=50, choices=SERVICE_CHOICES, default="Digital")
-    style = models.CharField(max_length=50, choices=STYLE_CHOICES, default="Disney")
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, null=True, blank=True)
+    service = models.CharField(
+        max_length=50, choices=SERVICE_CHOICES, default="Digital")
+    style = models.CharField(
+        max_length=50, choices=STYLE_CHOICES, default="Disney")
     day = models.DateField(default=datetime.now)
+
     def __str__(self):
         return f"{self.user.username} | day: {self.day}"

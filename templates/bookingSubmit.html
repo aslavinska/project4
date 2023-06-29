@@ -7,14 +7,14 @@
 
 <section class="page-section cta">
     {% if user.is_authenticated %}
-    <h1 class="text-center fPersian mt-3">Online Booking</h1>
+    <h1 class="text-center fPersian mt-3">Online Booking for a Commission</h1>
 
     <div class="shadow p-4 mb-5 bg-body bg-body rounded text-black text-center m-5">
         <form method="POST" action="{% url 'bookingSubmit' %}" class="me-2 ms-2" required>
             {% csrf_token %}
 
             <!--input time-->
-            <h3 class="section-heading-upper">Your booking has been successfully submitted.</h3>
+            <h3 class="section-heading-upper">Your commission request has been successfully submitted.</h3>
             <h3 class="section-heading-lower">Please click continue.</h3>
             <button type="submit" class="btn btn-secondary">Continue</button>
 

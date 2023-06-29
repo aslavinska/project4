@@ -7,13 +7,11 @@
 <section class="page-section cta">
     <h1 class="text-center  mt-3">Online Booking for a Commission</h1>
 
-
-
     <div class="shadow p-4 mb-5 bg-body bg-body rounded text-black  m-5 ">
         <form method="POST" action="{% url 'commission' %}" class="me-2 ms-2" required>
             {% csrf_token %}
             <h2 class="section-heading mb-4">
-                <!--input service-->
+                
                 <div>
                     <h3 class="section-heading-lower">Select Media:</h3>
                     <select class="form-select fs-3" name="service">
@@ -55,11 +53,20 @@
 {% else %}
 <section class="page-section cta">
     <div class="container">
-<div class="shadow p-4 mb-5 bg-body bg-body rounded text-black  m-5 ">
-    <h1 class="p-2  me-3">You Are Not Signed in!</h1>
-    <a href="{% url 'account_signup' %}" class="btn btn-primary shadow text-center">Sign in</a>
-</div>
-</div>
+        <h2 class="section-heading mb-4">
+            <div class="cta-inner bg-faded text-center rounded">
+                <div class="col-xl-9 col-lg-10 mx-auto">
+
+                    <span class="section-heading-lower">You Are Not Signed in!</span>
+                    <span class="section-heading-upper">Please Sign in below to see the field.</span>
+                    <br>
+                    <a href="{% url 'account_signup' %}" class="btn btn-secondary">Sign in</a>
+
+                </div>
+            </div>
+        </h2>
+
+    </div>
 </section>
 {% endif %}
 {% endblock %}

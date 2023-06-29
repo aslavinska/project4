@@ -19,9 +19,9 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-#X_FRAME_OPTIONS = 'SAMEORIGIN'
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = ["https://aslavinska-project4.herokuapp.com/", "aslavinska-project4.herokuapp.com", "localhost", "8000-aslavinska-project4-7uamhidnrbh.ws-eu101.gitpod.io"]
 
@@ -33,6 +33,7 @@ DEFAULT_FROM_EMAIL = "mail@example.com"
 EMAIL_HOST = "localhost"
 EMAIL_PORT = "1025"
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
@@ -73,6 +74,7 @@ SOCIALACCOUNT_QUERY_EMAIL = True
 ACCOUNT_LOGOUT_ON_GET= True
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 MESSAGE_TAGS = {
         messages.DEBUG: 'alert-info',
