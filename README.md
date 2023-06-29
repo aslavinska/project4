@@ -1,13 +1,13 @@
 # Sailor Shushu blog
-The official website of a British - Latvian Artist Sailor Shushu. This page is created for Sailor Shushu's fans of any age to enjoy her art and discuss it in a friendly community, support charities and to be able to contact Sailor Shushu for official communication abd business offers.
-Users of this will be able to find all the information they need to know about Sailor Shushu: About, Online times when users can chat with the artist real time, Contact form for business enquires, My blog page to disccus new art and book ideas, Booking online for comission requests. This site is targeted towards Sailor Shushu's fans, who love her art and want to commiunicate with her. 
+The official website of a British - Latvian Artist Sailor Shushu. This page is created for Sailor Shushu's fans of any age to enjoy her art and discuss it in a friendly community, support charities and to be able to contact Sailor Shushu for official communication in the blog and business offers via commission request tab.
+Users of this will be able to find all the information they need to know about Sailor Shushu: About, Online times when users can chat with the artist real time, My blog page to disccus new art and book ideas, Booking online for comission requests. This site is targeted towards Sailor Shushu's fans, who love her art and want to commiunicate with her. 
 ![Responsive](static/assets/responsive.jpg)
 
 # Features
 
 - **Navigation**
     - Featuring at the top of the main page, the name of the artist Sailor Shushu and above that is the main menu.
-    - The other navigation links are: Home, Contact, Online Time, About me, My Blog , Login/Logout and Register options. 
+    - The other navigation links are: Home, Online Time, About me, My Blog , Login/Logout and Register options. 
     - The navigation is in a font visible and readable for a user and color that contrasts with the background. 
     - The navigation clearly tells to the user the name of the app and website, and makes the different sections of information easy to find. 
     - The coffee theme is chosen as the artist drinks lots of coffee and without the magical drink her art wil not be possible.
@@ -21,9 +21,6 @@ Users of this will be able to find all the information they need to know about S
 - **The Header**
     - The header shows the name of the app, using the other color chosen: Shade of Orange with hand writing type of font theme. 
     - Thi section provides the user with clear information about what the site is and who is the targetted audience. 
-
-- **The Contact Me Section**
-    - The contact me section has a form to contact Sailor Shushu for business purposes only. 
 
 - **The Online Times Section**
     - Highlights online timing when the artist is available to respond to user comments real time.
@@ -93,7 +90,7 @@ Users of this will be able to find all the information they need to know about S
 # Testing
  - I have tested this page in brosers: Chrome and Firefox.
  - I confimed that this project is responsive, looks good and functions on all standard screen sizes using the devtools device toolbar.
- - I confirmed that the navigation, home, contact, online time, about me,my blog and login/register/logout are all readable and easy to understand. 
+ - I confirmed that the navigation, home, online time, about me,my blog and login/register/logout are all readable and easy to understand. 
  - I have confirmed that the form works: requires entries in every field, will only accept an email in the email field and the submit button works. 
  - I can confirm that post edit and delete functions work in the UI and models are updated without entering the admin panel.
  
@@ -165,9 +162,10 @@ Users of this will be able to find all the information they need to know about S
     1. Verified that only commission request author can edit the request from, all fields can be modified. 
     
  ## Bugs 
+    - No known bugs
 
  ### Solved bugs
-
+    - When users were trying to register the page was returning error 500, that was fixed by adding ACCOUNT_EMAIL_VERIFICATION as none. 
 
 ## Validator Testing 
 
