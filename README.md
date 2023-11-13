@@ -209,7 +209,7 @@ The site was deployed to Heroku using followin steps:
 4. Disable collecstatic variable has been removed from the heroku app config vars list
 5. In Heroku project in the deploy tab the main branch has been deployed. 
 
-The lie link can be found here - [Sailor Shushu Art Blog ](https://aslavinska-project4.herokuapp.com/).
+The lie link can be found here - [Sailor Shushu Art Blog ](https://aslavinska-project4-2242fe1d6e51.herokuapp.com/).
 
 # Credits
 
