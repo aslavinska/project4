@@ -23,7 +23,7 @@ DEBUG = True
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ["https://aslavinska-project4-2242fe1d6e51.herokuapp.com/", "aslavinska-project4.herokuapp.com", "localhost", "8000-aslavinska-project4-zbs0wbjao1e.ws-eu106.gitpod.io"]
+ALLOWED_HOSTS = ["https://aslavinska-project4-2242fe1d6e51.herokuapp.com/", "aslavinska-project4-2242fe1d6e51.herokuapp.com", "localhost", "8000-aslavinska-project4-zbs0wbjao1e.ws-eu106.gitpod.io"]
 
 
 
